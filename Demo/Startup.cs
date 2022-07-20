@@ -37,6 +37,7 @@ namespace Demo
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 6;
+                options.SignIn.RequireConfirmedEmail = true;
             
             }
             )
@@ -55,6 +56,7 @@ namespace Demo
                  //using Microsoft.AspNetCore.Authentication.Cookies;
                  options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                  options.SlidingExpiration = true;
+
              });
 
             services.AddControllersWithViews();
